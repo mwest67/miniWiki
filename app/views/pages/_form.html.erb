@@ -22,6 +22,6 @@
   </p>
   <p>
     <%= f.submit "Submit", :disable_with => 'Submiting...' %>
-    <%= link_to 'Cancel', {:action => :index}, :confirm => "You will lose all your changes, are you sure you want to cancel?" %>
+    <%= link_to 'Cancel', @cancel_action, :confirm => "You will lose all your changes, are you sure you want to cancel?" %>
   </p>
 <% end %>

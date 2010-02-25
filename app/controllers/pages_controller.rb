@@ -8,6 +8,7 @@ class PagesController < ApplicationController
   end
 
   def new
+    @cancel_action = {:action => :index}
     if params[:title] then
       @page.title = params[:title]
     end
@@ -18,6 +19,7 @@ class PagesController < ApplicationController
   end
 
   def edit
+    @cancel_action = page_url(@page)
     @action += " #{@page.title}"
   end
 
