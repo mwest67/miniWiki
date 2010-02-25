@@ -1,0 +1,27 @@
+<% form_for @page, :html => {:multipart => true } do |f| -%>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :title, "Title" %><br/>
+    <%= f.text_field :title %>
+  </p>  
+  <p>  
+    <%= f.label :body, "Body" %>
+  	<%= f.text_area :body %>
+  </p>
+  <p>  
+    <%= f.label :tag_list, "Tags" %><br/>
+  	<%= f.text_field :tag_list %>
+  </p>
+  <p>
+    <%= f.file_field :file_data %>
+    <div id="files_list"><h4>Files (maximum 10):</h4></div>
+    <script>
+      var multi_selector = new MultiSelector(document.getElementById('files_list'), 'page[attached_files][]', 10);
+      multi_selector.addElement(document.getElementById('page_file_data'));
+    </script>
+  </p>
+  <p>
+    <%= f.submit "Submit", :disable_with => 'Submiting...' %>
+    <%= link_to 'Cancel', {:action => :index}, :confirm => "You will lose all your changes, are you sure you want to cancel?" %>
+  </p>
+<% end %>

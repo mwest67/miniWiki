@@ -1,0 +1,7 @@
+page.replace_html 'browsecontent', content_tag('h3', "Pages for: #{@letter}")
+
+@pages.each do |p|
+  page.insert_html :bottom, 'browsecontent', link_to(p.title, page_url(p)) + '<br/>'
+end
+
+page.visual_effect :blind_down, 'browsecontent', :duration => 0.5

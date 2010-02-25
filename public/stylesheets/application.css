@@ -1,0 +1,141 @@
+body { background-color: #fff; color: #333; }
+#main {
+	width: 75%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#header {
+  margin: 0px;
+	background-color: #777;
+	border-bottom: 2px solid #000;
+	padding: 10px;
+}
+
+#header p {
+  margin: 0px;
+  padding: 10px;
+	color: #fff;
+  font-family: verdana, arial, helvetica, sans-serif;
+	font-size: 30px;
+}
+
+#nav {
+	float: left;
+	padding: 10px;
+	width: 150px;
+	border-right: 1px solid #000;
+}
+
+#content {
+	margin-left: 170px;
+	padding: 10px;
+	border-left: 1px solid #000;
+}
+
+
+#page_body {
+	width: 100%;
+}
+
+#browselinks {
+  font-size: 10px;
+}
+
+#page_taggings {
+  margin-left: 10px;
+  float: right;
+}
+
+.css_class1 {
+ background-color: #ccc;
+ font-size: 1em;  
+}
+
+.css_class2 {
+  background-color: #ccc;
+  font-size: 1.2em;  
+}
+
+.css_class3 {
+  background-color: #ccc;
+  font-size: 1.4em;  
+}
+
+.css_class4 {
+  background-color: #ccc;
+  font-size: 1.6em;  
+}
+
+.css_class5 {
+  background-color: #ccc;
+  font-size: 1.8em;  
+}
+
+.css_class6 {
+  background-color: #ccc;
+  font-size: 2em;  
+}
+
+blockquote {
+  font-style: italic;
+  color: #777;
+}
+th {
+  text-align: center;
+  color: #fff;
+  background-color: #777;
+}
+body, p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size:   13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #ccc;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a { color: #000; }
+a:visited { color: #666; }
+a:hover { color: #fff; background-color:#000; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: #777;
+  display: table;
+  color: #fff;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid #777;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #777;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+

@@ -1,0 +1,10 @@
+== miniWiki
+
+MiniWiki is a plain and simple wiki which uses
+
+* acts_as_ferret
+* RedCloth
+* acts_as_taggable_on_steroids
+* will_paginate
+
+It supports uploading files, searching by tags and text

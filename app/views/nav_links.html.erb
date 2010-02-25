@@ -1,0 +1,6 @@
+<h4>Recently Updated</h4>
+<ul>
+	<% Page.latest.each do |page| %>
+		<li><%= link_to page.title, page_url(page) %> </li>
+	<% end %>
+</ul>

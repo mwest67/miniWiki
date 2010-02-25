@@ -1,0 +1,34 @@
+<div id="page_header">
+	<h1><%= h @page.title %></h1>	
+</div>
+
+<div id="page_taggings">
+  <h4>Tagged as</h4>
+  <% @page.tag_list.each do |tag| %>
+    <%= link_to tag, :action => :search_tagged, :tags => tag %><br/>
+  <% end %>
+</div>
+
+
+<div id="page_content">
+	<%= RedCloth.new(@page.body).to_html %>
+</div>
+
+<div id="page_attachments">
+  <h4>Attached Files:</h4>
+  <% @page.attachments.each do |a| %>
+    <div id="attachment_<%=a.id%>">
+      <%= link_to a.file_name, "/files/#{a.file_name}" %> |  <%= link_to_remote 'Delete', :url => {:action => :delete_attachment, :id => @page.id, :attachment_id => a.id } %>
+    </div>
+  <% end %>
+</div>
+<br/>
+<div id="page_timestamps">
+	Created At: <%= @page.created_at %><br/	>
+	Updated At: <%= @page.updated_at %>
+</div>
+<br/>
+<div id="page_footoer">
+	<%= link_to "Edit", edit_page_url(@page) %> |
+	<%= link_to "Destroy", page_path(@page), :confirm => "Are you sure?", :method => :delete %>
+</div>

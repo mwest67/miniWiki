@@ -1,0 +1,33 @@
+<h1>Search Forms</h1>
+
+<h3>Find or Create by Name</h3>
+<% form_tag(:action => "find") do %>
+  <%= text_field_tag :title %>
+  <%= submit_tag 'Find' %>
+<% end -%>
+
+<h3>Search</h3>
+<% form_tag({:action => :search}, { :method => :get }) do %>
+  <%= text_field_tag :query %>
+
+  <%= label_tag :search_type_text, 'Text' %>
+  <%= radio_button_tag  :search_type, 'Text', true %>
+  <%= label_tag :search_type_tag, 'Tag' %>
+  <%= radio_button_tag  :search_type, 'Tag', false %>
+  <%= submit_tag 'Find' %>
+<% end -%>
+
+<div id="search_results">
+  <% if @pages then %>
+    <h3>Search Results</h3>
+      Displaying <%= @start_record %> to <%= @end_record %> of <%= @pages.total_entries %>
+      <p>
+        <% @pages.each do |page| %>
+          <% link_text = page.title %>
+          <% link_text += " - " + page.ferret_score.to_s if page.ferret_score %>
+          <%= link_to "#{link_text}", page_url(page) %> <br/>
+         <% end %>
+      </p>
+    <%= will_paginate @pages %>
+  <% end %>
+</div>
