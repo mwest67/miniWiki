@@ -62,7 +62,7 @@ class PagesController < ApplicationController
     if params[:search_type] then
       if params[:search_type].downcase == 'text' then
         @pages = text_search(params[:query], params[:page])
-      elsif session[:search_type].downcase == 'tag' 
+      elsif params[:search_type].downcase == 'tag' 
         @pages = tag_search(params[:query], params[:page])
       else
         render :text => "shit fucked up!"

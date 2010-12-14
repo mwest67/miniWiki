@@ -39,11 +39,15 @@ body { background-color: #fff; color: #333; }
 }
 
 #browselinks {
-  font-size: 10px;
+  font-size: 12px;
 }
 
 #page_taggings {
+  background-color: silver;
+  border: solid 1px black;
   margin-left: 10px;
+  padding: 12px;
+  padding-top: 0px;
   float: right;
 }
 
@@ -139,3 +143,19 @@ a:hover { color: #fff; background-color:#000; }
   list-style: square;
 }
 
+textarea {
+  overflow: auto;
+  margin: 0px;
+  padding: 0px;
+}
+
+.formfield {
+  padding: 0px;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  border: none;
+  padding: 0px;
+  margin: 0px;
+}
